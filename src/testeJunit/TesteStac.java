@@ -39,19 +39,19 @@ class TesteStac {
 		}
 
 		@Test
-		@DisplayName("Está vazia")
+		@DisplayName("Estï¿½ vazia")
 		void isEmpty() {
 			assertTrue(pilhaContas.isEmpty());
 		}
 
 		@Test
-		@DisplayName("Joga a Exceção de pilha vazia quando faz o pop")
+		@DisplayName("Joga a Exceï¿½ï¿½o de pilha vazia quando faz o pop")
 		void JogaExcecaoPop() {
 			assertThrows(AccountStackException.class, pilhaContas::pop);
 		}
 
 		@Test
-		@DisplayName("Joga a Exceção de pilha vazia quando chama o topo")
+		@DisplayName("Joga a Exceï¿½ï¿½o de pilha vazia quando chama o topo")
 		void JogaExcecaoPeek() {
 			assertThrows(ArrayIndexOutOfBoundsException.class, pilhaContas::top);
 		}
@@ -63,7 +63,7 @@ class TesteStac {
 		}
 
 		@Nested
-		@DisplayName("Após fazer push()")
+		@DisplayName("Apï¿½s fazer push()")
 		class AposPush {
 			@Test
 			@DisplayName("Adiciona a conta e retorna ela")
@@ -74,13 +74,13 @@ class TesteStac {
 			}
 
 			@Test
-			@DisplayName("Não está mais vazia")
+			@DisplayName("Nï¿½o estï¿½ mais vazia")
 			void isNotEmpty() {
 				assertFalse(pilhaContas.isEmpty());
 			}
 
 			@Test
-			@DisplayName("retorna quando pop() se for checking account, caso não joga exceção")
+			@DisplayName("retorna quando pop() se for checking account, caso nï¿½o joga exceï¿½ï¿½o")
 			void retornaElemento() {
 				assertEquals(ismael, pilhaContas.pop());
 				assertThrows(AccountStackException.class, pilhaContas::pop);
@@ -88,7 +88,7 @@ class TesteStac {
 			}
 
 			@Test
-			@DisplayName("retorna o elemento quando top() mas não fica vazia")
+			@DisplayName("retorna o elemento quando top() mas nï¿½o fica vazia")
 			void retornaElementoTop() {
 				assertEquals(ismael, pilhaContas.top());
 				assertFalse(pilhaContas.isEmpty());
